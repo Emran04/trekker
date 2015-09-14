@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en" ng-app="application">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundation for Apps</title>
+    <link href="./assets/css/app.css" rel="stylesheet" type="text/css">
+    <script src="./assets/js/foundation.js"></script>
+    <script src="./assets/js/templates.js"></script>
+    <script src="./assets/js/routes.js"></script>
+    <script src="./assets/js/app.js"></script>
+  </head>
+  <body>
+    <div class="grid-frame vertical">
+      
+      <div class="grid-block shrink wrap" style="padding: 0;">
+        
+        <div class="grid-content collapse small-12 medium-5">
+          <ul class="primary menu-bar">
+            <li ui-sref-active="is-active"><a ui-sref="home"><strong><img zf-iconic="" icon="person" size="small" > Trekker</strong></a></li>
+          </ul>
+        </div>
+
+        <div class="grid-content collapse small-12 medium-7">
+          <ul class="primary menu-bar">
+            <li ui-sref-active="is-active"><a ui-sref="add-trails">Add Trails</a></li>
+            <li ui-sref-active="is-active"><a ui-sref="about">About</a></li>
+            <li ui-sref-active="is-active"><a ui-sref="contact">Contact</a></li>
+          </ul>
+        </div>
+        
+      </div>
+
+      <div class="grid-block">
+        <div class="grid-block show-for-medium medium-5">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13213.303392438971!2d-118.35123519999999!3d34.11240684999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bee34e0c488f%3A0x8ee8f604f42b3f03!2sRunyon+Canyon+Park!5e0!3m2!1sen!2sus!4v1437067495757" width="100%" height="1000" frameborder="0" style="border:0"></iframe>
+        </div>
+
+        <div ui-view class="grid-content"></div>
+        <zf-notification-static id="trail-notify" title="New Trail" position="bottom-left">
+          <p>We've added your awesome trail to our list!</p>
+        </zf-notification-static>
+      </div>
+
+    </div>
+  </body>
+</html>
